@@ -458,7 +458,7 @@ local function RBLXSZM_fake_script() -- ServiceLogger.LocalScript
 			A_1Text ="- JobId: "..game.JobId.." | Stable."
 			wait(.01)
 			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
-			wait(.01)
+			wait(4)
 			A_1Text ="- Roblox LocaleId: "..game.LocalizationService.RobloxLocaleId.." | Default."
 			wait(.01)
 			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
