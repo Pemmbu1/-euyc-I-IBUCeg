@@ -34,6 +34,7 @@ local UICorner_4 = Instance.new("UICorner")
 JSONLOGGERV2.Name = "JSONLOGGERV2"
 JSONLOGGERV2.Parent = game.CoreGui
 JSONLOGGERV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+JSONLOGGERV2.IgnoreGuiInset = true
 
 Background.Name = "Background"
 Background.Parent = JSONLOGGERV2
