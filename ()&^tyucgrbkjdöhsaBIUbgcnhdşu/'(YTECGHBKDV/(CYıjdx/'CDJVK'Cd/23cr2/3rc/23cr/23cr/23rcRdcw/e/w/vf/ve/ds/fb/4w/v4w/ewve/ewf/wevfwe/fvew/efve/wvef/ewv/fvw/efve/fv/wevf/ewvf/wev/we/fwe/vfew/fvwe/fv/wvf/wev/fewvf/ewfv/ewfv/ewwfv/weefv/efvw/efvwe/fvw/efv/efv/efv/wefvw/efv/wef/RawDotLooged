@@ -466,7 +466,7 @@ local function RBLXSZM_fake_script() -- ServiceLogger.LocalScript
 			A_1Text ="- System LocaleId: "..game.LocalizationService.SystemLocaleId.." | Default."
 			wait(.01)
                         local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
-			wait(6)
+			wait(11)
 			A_1Text ="- Repeating Last Steps"
 			wait(3)
 			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
