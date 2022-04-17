@@ -1,0 +1,532 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local JSONLOGGERV2 = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
+local INFO = Instance.new("ImageLabel")
+local Background_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local o = Instance.new("TextLabel")
+local Logger = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local A = Instance.new("TextLabel")
+local SK = Instance.new("TextLabel")
+local B = Instance.new("TextLabel")
+local SK_2 = Instance.new("TextLabel")
+local C = Instance.new("TextLabel")
+local SK_3 = Instance.new("TextLabel")
+local D = Instance.new("TextLabel")
+local SK_4 = Instance.new("TextLabel")
+local Wellcome = Instance.new("TextLabel")
+local e = Instance.new("TextLabel")
+local t = Instance.new("TextLabel")
+local y = Instance.new("TextLabel")
+local u = Instance.new("TextLabel")
+local ServiceLogger = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Exit = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+JSONLOGGERV2.Name = "JSONLOGGERV2"
+JSONLOGGERV2.Parent = game.CoreGui
+JSONLOGGERV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Background.Name = "Background"
+Background.Parent = JSONLOGGERV2
+Background.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+Background.BackgroundTransparency = 0.300
+Background.Position = UDim2.new(-2.32830644e-08, 0, 1.49011612e-08, 0)
+Background.Size = UDim2.new(1, 0, 1, 0)
+
+INFO.Name = "INFO"
+INFO.Parent = Background
+INFO.AnchorPoint = Vector2.new(0.5, 0.5)
+INFO.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+INFO.BackgroundTransparency = 1.000
+INFO.BorderSizePixel = 0
+INFO.Position = UDim2.new(0.499325842, 0, 0.498880923, 0)
+INFO.Size = UDim2.new(0.312189817, 28, 0.32461223, 28)
+INFO.ZIndex = -1
+INFO.Image = "rbxassetid://6653510046"
+INFO.ImageColor3 = Color3.fromRGB(0, 0, 0)
+INFO.ImageTransparency = 0.500
+INFO.ScaleType = Enum.ScaleType.Slice
+INFO.SliceCenter = Rect.new(33, 33, 33, 33)
+
+Background_2.Name = "Background"
+Background_2.Parent = INFO
+Background_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Background_2.Position = UDim2.new(0.0378042981, 0, 0.0500350669, 0)
+Background_2.Size = UDim2.new(0.924391389, 0, 0.90447849, 0)
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = Background_2
+
+o.Name = "o"
+o.Parent = Background_2
+o.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+o.BackgroundTransparency = 1.000
+o.Position = UDim2.new(0.0434524454, 0, 0.160928696, 0)
+o.Size = UDim2.new(0, 200, 0, 16)
+o.Font = Enum.Font.GothamSemibold
+o.Text = "Json Logger V2"
+o.TextColor3 = Color3.fromRGB(255, 255, 255)
+o.TextScaled = true
+o.TextSize = 14.000
+o.TextWrapped = true
+o.TextXAlignment = Enum.TextXAlignment.Left
+
+Logger.Name = "Logger"
+Logger.Parent = Background_2
+Logger.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Logger.Position = UDim2.new(0.0224681944, 0, 0.115412354, 0)
+Logger.Size = UDim2.new(0.955063701, 0, 0.763665915, 0)
+Logger.Visible = false
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = Logger
+
+A.Name = "A"
+A.Parent = Logger
+A.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+A.BackgroundTransparency = 1.000
+A.Position = UDim2.new(0.017612068, 0, 0.050888598, 0)
+A.Size = UDim2.new(0.59550184, 0, 0.0724583939, 0)
+A.Visible = false
+A.Font = Enum.Font.GothamBold
+A.Text = "• Server Log."
+A.TextColor3 = Color3.fromRGB(101, 204, 151)
+A.TextScaled = true
+A.TextSize = 14.000
+A.TextWrapped = true
+A.TextXAlignment = Enum.TextXAlignment.Left
+
+SK.Name = "SK+"
+SK.Parent = A
+SK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SK.BackgroundTransparency = 1.000
+SK.Position = UDim2.new(-0.000364661217, 0, 0.933612347, 0)
+SK.Size = UDim2.new(0.595501781, 0, 1.06612003, 0)
+SK.Font = Enum.Font.GothamBold
+SK.Text = "• Success."
+SK.TextColor3 = Color3.fromRGB(204, 154, 74)
+SK.TextScaled = true
+SK.TextSize = 14.000
+SK.TextWrapped = true
+SK.TextXAlignment = Enum.TextXAlignment.Left
+
+B.Name = "B"
+B.Parent = Logger
+B.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+B.BackgroundTransparency = 1.000
+B.Position = UDim2.new(0.0149357794, 0, 0.255035043, 0)
+B.Size = UDim2.new(0.59550184, 0, 0.0724583939, 0)
+B.Visible = false
+B.Font = Enum.Font.GothamBold
+B.Text = "• Service Log."
+B.TextColor3 = Color3.fromRGB(101, 204, 151)
+B.TextScaled = true
+B.TextSize = 14.000
+B.TextWrapped = true
+B.TextXAlignment = Enum.TextXAlignment.Left
+
+SK_2.Name = "SK+"
+SK_2.Parent = B
+SK_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SK_2.BackgroundTransparency = 1.000
+SK_2.Position = UDim2.new(-0.000364661217, 0, 0.933612347, 0)
+SK_2.Size = UDim2.new(0.595501781, 0, 1.06612003, 0)
+SK_2.Font = Enum.Font.GothamBold
+SK_2.Text = "• Success."
+SK_2.TextColor3 = Color3.fromRGB(204, 154, 74)
+SK_2.TextScaled = true
+SK_2.TextSize = 14.000
+SK_2.TextWrapped = true
+SK_2.TextXAlignment = Enum.TextXAlignment.Left
+
+C.Name = "C"
+C.Parent = Logger
+C.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+C.BackgroundTransparency = 1.000
+C.Position = UDim2.new(0.017612068, 0, 0.459181488, 0)
+C.Size = UDim2.new(0.59550184, 0, 0.0724583939, 0)
+C.Visible = false
+C.Font = Enum.Font.GothamBold
+C.Text = "• Json Client."
+C.TextColor3 = Color3.fromRGB(101, 204, 151)
+C.TextScaled = true
+C.TextSize = 14.000
+C.TextWrapped = true
+C.TextXAlignment = Enum.TextXAlignment.Left
+
+SK_3.Name = "SK+"
+SK_3.Parent = C
+SK_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SK_3.BackgroundTransparency = 1.000
+SK_3.Position = UDim2.new(-0.000364661217, 0, 0.933612347, 0)
+SK_3.Size = UDim2.new(0.595501781, 0, 1.06612003, 0)
+SK_3.Font = Enum.Font.GothamBold
+SK_3.Text = "• Success."
+SK_3.TextColor3 = Color3.fromRGB(204, 154, 74)
+SK_3.TextScaled = true
+SK_3.TextSize = 14.000
+SK_3.TextWrapped = true
+SK_3.TextXAlignment = Enum.TextXAlignment.Left
+
+D.Name = "D"
+D.Parent = Logger
+D.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+D.BackgroundTransparency = 1.000
+D.Position = UDim2.new(0.017612068, 0, 0.676498652, 0)
+D.Size = UDim2.new(0.59550184, 0, 0.0724583939, 0)
+D.Visible = false
+D.Font = Enum.Font.GothamBold
+D.Text = "• Json Loggin."
+D.TextColor3 = Color3.fromRGB(101, 204, 151)
+D.TextScaled = true
+D.TextSize = 14.000
+D.TextWrapped = true
+D.TextXAlignment = Enum.TextXAlignment.Left
+
+SK_4.Name = "SK+"
+SK_4.Parent = D
+SK_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SK_4.BackgroundTransparency = 1.000
+SK_4.Position = UDim2.new(-0.000364661217, 0, 0.933612347, 0)
+SK_4.Size = UDim2.new(0.595501781, 0, 1.06612003, 0)
+SK_4.Font = Enum.Font.GothamBold
+SK_4.Text = "• Success."
+SK_4.TextColor3 = Color3.fromRGB(204, 154, 74)
+SK_4.TextScaled = true
+SK_4.TextSize = 14.000
+SK_4.TextWrapped = true
+SK_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Wellcome.Name = "Wellcome"
+Wellcome.Parent = Background_2
+Wellcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Wellcome.BackgroundTransparency = 1.000
+Wellcome.Position = UDim2.new(0.0431723334, 0, 0.287252545, 0)
+Wellcome.Size = UDim2.new(0.59550184, 0, 0.0674293116, 0)
+Wellcome.Font = Enum.Font.GothamBold
+Wellcome.Text = "• Wellcome to Json Logger."
+Wellcome.TextColor3 = Color3.fromRGB(101, 204, 151)
+Wellcome.TextScaled = true
+Wellcome.TextSize = 14.000
+Wellcome.TextWrapped = true
+Wellcome.TextXAlignment = Enum.TextXAlignment.Left
+
+e.Name = "e"
+e.Parent = Background_2
+e.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+e.BackgroundTransparency = 1.000
+e.Position = UDim2.new(0.0431723334, 0, 0.352629721, 0)
+e.Size = UDim2.new(0.933823347, 0, 0.077487357, 0)
+e.Font = Enum.Font.SourceSansItalic
+e.Text = "• in-order to log the json please press the button that says, log services."
+e.TextColor3 = Color3.fromRGB(101, 204, 151)
+e.TextScaled = true
+e.TextSize = 14.000
+e.TextWrapped = true
+e.TextXAlignment = Enum.TextXAlignment.Left
+
+t.Name = "t"
+t.Parent = Background_2
+t.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+t.BackgroundTransparency = 1.000
+t.Position = UDim2.new(0.0431723334, 0, 0.46326822, 0)
+t.Size = UDim2.new(0.933823347, 0, 0.077487357, 0)
+t.Font = Enum.Font.SourceSansItalic
+t.Text = "• if the service log does not work please report it."
+t.TextColor3 = Color3.fromRGB(101, 204, 151)
+t.TextScaled = true
+t.TextSize = 14.000
+t.TextWrapped = true
+t.TextXAlignment = Enum.TextXAlignment.Left
+
+y.Name = "y"
+y.Parent = Background_2
+y.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+y.BackgroundTransparency = 1.000
+y.Position = UDim2.new(0.0431723334, 0, 0.538703561, 0)
+y.Size = UDim2.new(0.933823347, 0, 0.077487357, 0)
+y.Font = Enum.Font.SourceSansItalic
+y.Text = "• the discord will be printed in the console."
+y.TextColor3 = Color3.fromRGB(101, 204, 151)
+y.TextScaled = true
+y.TextSize = 14.000
+y.TextWrapped = true
+y.TextXAlignment = Enum.TextXAlignment.Left
+
+u.Name = "u"
+u.Parent = Background_2
+u.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+u.BackgroundTransparency = 1.000
+u.Position = UDim2.new(0.0431723334, 0, 0.614138901, 0)
+u.Size = UDim2.new(0.933823347, 0, 0.077487357, 0)
+u.Font = Enum.Font.SourceSansItalic
+u.Text = "• get in tuch with the owner in-order to fix the glich."
+u.TextColor3 = Color3.fromRGB(101, 204, 151)
+u.TextScaled = true
+u.TextSize = 14.000
+u.TextWrapped = true
+u.TextXAlignment = Enum.TextXAlignment.Left
+
+ServiceLogger.Name = "ServiceLogger"
+ServiceLogger.Parent = Background_2
+ServiceLogger.BackgroundColor3 = Color3.fromRGB(101, 204, 151)
+ServiceLogger.Position = UDim2.new(0.0434524454, 0, 0.739266217, 0)
+ServiceLogger.Size = UDim2.new(0, 158, 0, 17)
+ServiceLogger.Font = Enum.Font.GothamBlack
+ServiceLogger.Text = "Log Services."
+ServiceLogger.TextColor3 = Color3.fromRGB(15, 15, 15)
+ServiceLogger.TextScaled = true
+ServiceLogger.TextSize = 14.000
+ServiceLogger.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = ServiceLogger
+
+Exit.Name = "Exit"
+Exit.Parent = Background_2
+Exit.BackgroundColor3 = Color3.fromRGB(204, 154, 74)
+Exit.Position = UDim2.new(0.480532914, 0, 0.739266217, 0)
+Exit.Size = UDim2.new(0, 158, 0, 17)
+Exit.Font = Enum.Font.GothamBlack
+Exit.Text = "Exit"
+Exit.TextColor3 = Color3.fromRGB(15, 15, 15)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = Exit
+
+-- Scripts:
+
+local function RGWVOH_fake_script() -- ServiceLogger.LocalScript 
+	local script = Instance.new('LocalScript', ServiceLogger)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.e:Destroy()
+		wait(0)
+		script.Parent.Parent.t:Destroy()
+		wait(0)
+		script.Parent.Parent.o:Destroy()
+		wait(0)
+		script.Parent.Parent.u:Destroy()
+		wait(0)
+		script.Parent.Parent.y:Destroy()
+		wait(0)
+		script.Parent.Parent.Exit:Destroy()
+		wait(0)
+		script.Parent.Parent.Wellcome:Destroy()
+		wait(0)
+		script.Parent.Parent.ServiceLogger.Visible = false
+		wait(1)
+		script.Parent.Parent.Logger.Visible = true
+		wait(3)
+		script.Parent.Parent.Logger.A.Visible = true
+		wait(2)
+		script.Parent.Parent.Logger.B.Visible = true
+		wait(7)
+		script.Parent.Parent.Logger.C.Visible = true
+		wait(3)
+		script.Parent.Parent.Logger.D.Visible = true
+		wait(3)
+		script.Parent.Parent.Logger:Destroy()
+		wait(1)
+		script.Parent.Parent.Parent.Parent.Parent.Background.Visible = false
+		wait(.01)
+		game.Lighting.BBTR.Size = 19
+		wait(.01)
+		game.Lighting.BBTR.Size = 18
+		wait(.01)
+		game.Lighting.BBTR.Size = 17
+		wait(.01)
+		game.Lighting.BBTR.Size = 16
+		wait(.01)
+		game.Lighting.BBTR.Size = 15
+		wait(.01)
+		game.Lighting.BBTR.Size = 14
+		wait(.01)
+		game.Lighting.BBTR.Size = 13
+		wait(.01)
+		game.Lighting.BBTR.Size = 12
+		wait(.01)
+		game.Lighting.BBTR.Size = 11
+		wait(.01)
+		game.Lighting.BBTR.Size = 10
+		wait(.01)
+		game.Lighting.BBTR.Size = 9
+		wait(.01)
+		game.Lighting.BBTR.Size = 8
+		wait(.01)
+		game.Lighting.BBTR.Size = 7
+		wait(.01)
+		game.Lighting.BBTR.Size = 6
+		wait(.01)
+		game.Lighting.BBTR.Size = 5
+		wait(.01)
+		game.Lighting.BBTR.Size = 4
+		wait(.01)
+		game.Lighting.BBTR.Size = 3
+		wait(.01)
+		game.Lighting.BBTR.Size = 2
+		wait(.01)
+		game.Lighting.BBTR.Size = 1
+		wait(.01)
+		game.Lighting.BBTR.Size = 0
+		wait(.01)
+		game.Lighting.BBTR:Destroy()
+	end)
+end
+coroutine.wrap(RGWVOH_fake_script)()
+local function LSXPEQK_fake_script() -- ServiceLogger.LocalScript 
+	local script = Instance.new('LocalScript', ServiceLogger)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(20)
+		game.Workspace.CurrentCamera.FieldOfView = 51
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 52
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 53
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 54
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 55
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 56
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 57
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 58
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 59
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 60
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 61
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 62
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 63
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 64
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 65
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 66
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 67
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 68
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 69
+		wait(.01)
+		game.Workspace.CurrentCamera.FieldOfView = 70
+	end)
+end
+coroutine.wrap(LSXPEQK_fake_script)()
+local function RBLXSZM_fake_script() -- ServiceLogger.LocalScript 
+	local script = Instance.new('LocalScript', ServiceLogger)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(4)
+		local Message ="A_1"
+		local A_1Text ="- Loging J$on Clients.."
+		local A_2 ="All"
+	
+		while true do
+			wait(1)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(0.5)
+			A_1Text ="- Made By @Pemmbu#6785"
+			wait(.01)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(.01)
+			A_1Text ="- №Client"
+			wait(.01)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(.01)
+			A_1Text ="- JobId: "..game.JobId.." | Stable."
+			wait(.01)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(.01)
+			A_1Text ="- Roblox LocaleId: "..game.LocalizationService.RobloxLocaleId.." | Default."
+			wait(.01)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(.01)
+			A_1Text ="- System LocaleId: "..game.LocalizationService.SystemLocaleId.." | Defaoult."
+			wait(.01)
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+			wait(0)
+			A_2:Destroy()
+		end
+	
+	end)
+end
+coroutine.wrap(RBLXSZM_fake_script)()
+local function DZWP_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(.01)
+		print("• Exiting..")
+		wait(.01)
+		script.Parent.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(DZWP_fake_script)()
+local function SDLZ_fake_script() -- JSONLOGGERV2.Print 
+	local script = Instance.new('LocalScript', JSONLOGGERV2)
+
+	wait(1)
+	print("• Made by - @Pemmbu")
+	wait(.01)
+	print("• Discord - Pemmbu#6785")
+	wait(.01)
+	print(" ")
+	wait(.01)
+	print("• Thanks for useing Json Logger V2!")
+end
+coroutine.wrap(SDLZ_fake_script)()
+local function PCIB_fake_script() -- JSONLOGGERV2.FOV 
+	local script = Instance.new('LocalScript', JSONLOGGERV2)
+
+	game.Workspace.CurrentCamera.FieldOfView = 50
+end
+coroutine.wrap(PCIB_fake_script)()
+local function UQEE_fake_script() -- JSONLOGGERV2.Blur 
+	local script = Instance.new('LocalScript', JSONLOGGERV2)
+
+	local Blur = Instance.new("BlurEffect")
+	
+	Blur.Parent = game.Lighting
+	Blur.Size = 20
+	Blur.Name ="BBTR"
+end
+coroutine.wrap(UQEE_fake_script)()
+local function IKWQ_fake_script() -- JSONLOGGERV2.Speak 
+	local script = Instance.new('LocalScript', JSONLOGGERV2)
+
+	local Message ="A_1"
+	local A_1Text ="- Wellcome To J$on Logger!"
+	local A_2 ="All"
+	
+	while true do
+		wait(1)
+		local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1Text, A_2)
+		wait(0.5)
+		A_1Text:Destroy()
+		wait(0)
+		A_2:Destroy()
+	end
+	
+end
+coroutine.wrap(IKWQ_fake_script)()
